@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>
+        this is title
+    </title>
+</head>
+<body>
+    <script>
+        function computerPlay(){
+            let num = Math.random()
+            if (num < 0.33){
+                return "rock"
+            }
+            else if (num < 0.66){
+                return "paper"
+            }
+            else{
+                return "scissors"
+            }
+        }
+        function playerPlay(){
+            let play = prompt("enter your play").toLowerCase()
+            return play
+        }
+        function game(){
+            let computer = computerPlay()
+            let player = playerPlay()
+            console.log("computer ->" + computer)
+            console.log("player ->" + player)
+            if (computer == player){
+                console.log("tie!")
+            }
+            else if ((computer == "rock" & player == "paper")|(computer == "paper" & player == "scissors")|(computer == "scissors" & player == "rock")){
+                console.log("win!")
+            }
+            else{
+                console.log("lose!")
+            }
+
+        }
+        game()
+    </script>
+</body>
+</html>
